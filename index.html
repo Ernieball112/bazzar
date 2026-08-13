@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/organic-a611516e-8e7c-4bd7-98e4-3dc45a7fadaf/styles.css">
+<script src="_ds/organic-a611516e-8e7c-4bd7-98e4-3dc45a7fadaf/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;display=swap">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-size: 17px; margin: 0; }
+  x-dc, x-dc > div { display: block; width: 100%; }
+  @keyframes floatIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(115,103,240,.45); } 70% { box-shadow: 0 0 0 18px rgba(115,103,240,0); } 100% { box-shadow: 0 0 0 0 rgba(115,103,240,0); } }
+  a:hover { color: var(--color-accent-700); }
+  /* Caprasimo nema đ/š/ć — display glyfovi za srpsku latinicu dolaze iz Baloo 2 */
+  html:root { --font-heading: "Baloo 2", system-ui, sans-serif; --font-heading-weight: 800; }
+  h1, h2, h3, h4, h5, h6, .card-title, .nav-brand, .btn, .dialog-title {
+    font-family: "Baloo 2", system-ui, sans-serif; font-weight: 800;
+  }
+</style>
+</helmet>
+
+<div style="--font-heading: 'Baloo 2', system-ui, sans-serif; --font-heading-weight: 800; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); min-height: 100vh; overflow-x: hidden">
+
+  <header style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px); background: color-mix(in srgb, var(--color-bg) 88%, transparent)">
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; align-items: center; gap: 18px; padding: 14px 24px; white-space: nowrap">
+      <a href="#pocetak" style="text-decoration: none; color: inherit; margin-right: auto; display: flex; align-items: center; gap: 12px">
+        <img src="slike/logo.png" alt="Bazzar Dental Office logo" style="width: 50px; height: 50px; border-radius: 999px; object-fit: cover; flex: 0 0 auto; display: block">
+        <span style="display: flex; flex-direction: column; line-height: 1.05; gap: 3px;">
+          <span style="font-family: var(--font-heading); font-size: 23px; letter-spacing: -0.01em;">Bazzar Dental Office</span>
+          <span style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.7; font-weight: 700;">Niš Dr MILAN SPASIĆ</span>
+        </span>
+      </a>
+      <nav style="display: none; gap: 20px; font-size: 15px; white-space: nowrap" data-navlinks="1">
+        <a href="#o-nama" style="text-decoration: none; color: inherit">O nama</a>
+        <a href="#usluge" style="text-decoration: none; color: inherit">Usluge</a>
+        <a href="#galerija" style="text-decoration: none; color: inherit">Galerija</a>
+        <a href="#cenovnik" style="text-decoration: none; color: inherit">Cenovnik</a>
+        <a href="#iskustva" style="text-decoration: none; color: inherit">Iskustva</a>
+      </nav>
+      <a href="tel:018522566" class="btn btn-secondary" style="font-size: 14px; white-space: nowrap" data-hdrtel="1">018 522 566</a>
+      <a href="tel:0638626663" class="btn btn-secondary" style="font-size: 14px; white-space: nowrap" data-hdrtel2="1">063 862 6663</a>
+      <a href="#termin" class="btn btn-primary" data-hdrcta="1">Zakaži termin</a>
+    </div>
+  </header>
+
+  <section id="pocetak" style="max-width: 1180px; margin: 0 auto; padding: 56px 24px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center">
+    <div style="animation: floatIn .6s ease both">
+      <span class="tag tag-accent-2" style="font-size: 12px; padding: 6px 14px">Dušanov bazar · drugi sprat</span>
+      <h1 style="font-size: clamp(42px, 5.4vw, 68px); margin: 20px 0 18px; text-wrap: pretty; letter-spacing: -0.02em">Dođite bez strepnje.<br>Izađite sa osmehom.</h1>
+      <p style="font-size: 19px; line-height: 1.6; max-width: 30em; opacity: 0.82; text-wrap: pretty">Mala ordinacija u samom centru Niša. Radimo bez žurbe, objasnimo svaki korak pre nego što ga uradimo i stanemo kad vam zatreba pauza.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px">
+        <a href="#termin" class="btn btn-primary" style="font-size: 16px; padding: 14px 26px">Zakaži termin online</a>
+        <a href="viber://chat?number=%2B381638626663" onClick="{{ tryViber }}" class="btn btn-secondary" style="font-size: 16px; padding: 14px 22px">Poslati poruku na Viber</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px">
+        <span class="tag tag-neutral" style="font-size: 12.5px; padding: 7px 14px">Bezbolna anestezija</span>
+        <span class="tag tag-neutral" style="font-size: 12.5px; padding: 7px 14px">Prvi pregled bez naplate</span>
+        <span class="tag tag-neutral" style="font-size: 12.5px; padding: 7px 14px">Radnim danima do 19h</span>
+      </div>
+    </div>
+    <div style="position: relative; animation: floatIn .8s ease both">
+      <div class="washed" style="position: relative; z-index: 1; aspect-ratio: 4 / 5; border-radius: 999px 999px 40px 999px; overflow: hidden; box-shadow: var(--shadow-lg)">
+        <img src="slike/hero.png" alt="Recepcija ordinacije Bazzar Dental Office" style="width: 100%; height: 100%; object-fit: cover; display: block">
+      </div>
+      <div style="position: absolute; z-index: 2; bottom: 18px; left: -10px; background: var(--color-bg); border-radius: 999px; padding: 12px 20px; box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 10px">
+        <span style="font-family: var(--font-heading); font-size: 22px; color: var(--color-accent)">14</span>
+        <span style="font-size: 12.5px; line-height: 1.25; opacity: 0.7">godina<br>u Dušanovom bazaru</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="o-nama" style="max-width: 1180px; margin: 0 auto; padding: 80px 24px">
+    <h2 style="font-size: clamp(30px, 3.4vw, 42px); max-width: 22em">Ljudi kod kojih dolazite</h2>
+    <p style="font-size: 18px; opacity: 0.78; max-width: 34em; margin-bottom: 40px">Istu ekipu ćete videti i za pet godina. To je jedini način da se zubar prestane doživljavati kao neprijatna obaveza.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+      <sc-for list="{{ team }}" as="m" hint-placeholder-count="3">
+        <div class="card elev-sm" style="padding: 24px; gap: 12px; align-items: flex-start">
+          <div style="width: 108px; height: 108px; border-radius: 999px; overflow: hidden" class="washed">
+            <div style="width:100%;height:100%;background:var(--color-neutral-200);display:block"></div>
+          </div>
+          <span class="card-kicker" style="font-size: 11px">{{ m.role }}</span>
+          <div class="card-title" style="font-size: 20px">{{ m.name }}</div>
+          <p class="card-body" style="font-size: 14.5px">{{ m.note }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="usluge" style="background: var(--color-surface); padding: 84px 0">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px">
+      <h2 style="font-size: clamp(30px, 3.4vw, 42px)">Šta radimo</h2>
+      <p style="font-size: 18px; opacity: 0.78; max-width: 34em; margin-bottom: 44px">Četiri oblasti, jedna ordinacija — ne šaljemo vas na tri adrese.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 28px">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+          <div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start">
+            <span style="width: 54px; height: 54px; border-radius: 999px; background: var(--color-bg); color: var(--color-accent); font-family: var(--font-heading); font-size: 22px; display: grid; place-items: center">{{ s.num }}</span>
+            <h3 style="font-size: 23px; margin: 0">{{ s.name }}</h3>
+            <p style="font-size: 15.5px; opacity: 0.8; margin: 0">{{ s.desc }}</p>
+            <span style="font-size: 13px; opacity: 0.6">{{ s.dur }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerija" style="max-width: 1180px; margin: 0 auto; padding: 88px 24px">
+    <h2 style="font-size: clamp(30px, 3.4vw, 42px)">Galerija</h2>
+    <p style="font-size: 18px; opacity: 0.78; max-width: 34em; margin-bottom: 40px">Ordinacija, ekipa i rezultati. Slike su naše, bez retuširanja.</p>
+    <div data-gallery="1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 45%), 1fr)); grid-auto-rows: clamp(110px, 15vw, 200px); gap: 14px">
+      <div class="washed" style="grid-column: span 2; grid-row: span 2; border-radius: 40px; overflow: hidden; box-shadow: var(--shadow-sm)">
+        <img src="slike/cekaonica.png" alt="Čekaonica sa pogledom na ordinaciju" style="width: 100%; height: 100%; object-fit: cover; display: block">
+      </div>
+      <div class="washed" style="border-radius: 999px 40px 40px 40px; overflow: hidden">
+        <div style="width:100%;height:100%;background:var(--color-neutral-200);display:block"></div>
+      </div>
+      <div class="washed" style="border-radius: 40px; overflow: hidden">
+        <img src="slike/ekipa.png" alt="Ekipa ordinacije" style="width: 100%; height: 100%; object-fit: cover; display: block">
+      </div>
+      <div class="washed" style="border-radius: 40px 40px 40px 999px; overflow: hidden">
+        <img src="slike/atmosfera.png" alt="Tim ordinacije u radnoj atmosferi" style="width: 100%; height: 100%; object-fit: cover; display: block">
+      </div>
+      <div class="washed" style="border-radius: 40px; overflow: hidden">
+        <div style="width:100%;height:100%;background:var(--color-neutral-200);display:block"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="termin" style="max-width: 1180px; margin: 0 auto; padding: 88px 24px">
+    <div data-termin-grid="1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: start">
+      <div>
+        <h2 style="font-size: clamp(30px, 3.4vw, 42px)">Zakažite termin</h2>
+        <sc-if value="{{ useCal }}">
+          <p style="font-size: 18px; opacity: 0.8; max-width: 24em">Izaberite dan i vreme u kalendaru. Potvrdu i podsetnik dobijate na e-mail, a termin možete pomeriti ili otkazati istim linkom.</p>
+        </sc-if>
+        <sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+          <p style="font-size: 18px; opacity: 0.8; max-width: 26em">Tri koraka, bez poziva. Potvrdu dobijate na telefon istog dana, a termin možete pomeriti kad god treba.</p>
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 30px">
+            <div style="display: flex; gap: 12px; align-items: baseline"><span style="font-family: var(--font-heading); color: var(--color-accent-2-700)">1</span><span style="font-size: 15.5px; opacity: 0.8">Izaberite uslugu</span></div>
+            <div style="display: flex; gap: 12px; align-items: baseline"><span style="font-family: var(--font-heading); color: var(--color-accent-2-700)">2</span><span style="font-size: 15.5px; opacity: 0.8">Izaberite slobodan termin</span></div>
+            <div style="display: flex; gap: 12px; align-items: baseline"><span style="font-family: var(--font-heading); color: var(--color-accent-2-700)">3</span><span style="font-size: 15.5px; opacity: 0.8">Ostavite kontakt</span></div>
+          </div>
+        </sc-if>
+        <p style="font-size: 14.5px; opacity: 0.6; margin-top: 30px">Bol koji ne može da čeka? Zovite <a href="tel:018522566" style="color: var(--color-accent-700)">018 522 566</a> — hitne slučajeve primamo istog dana.</p>
+      </div>
+
+      <div class="card elev-md" data-termin-card="1" style="padding: 30px; gap: 22px; background: var(--color-surface)">
+        <sc-if value="{{ useCal }}">
+          <div style="position: relative; width: 100%; min-height: 560px">
+            <sc-if value="{{ calLoading }}">
+              <div style="position: absolute; inset: 0; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; justify-content: center; padding: 24px">
+                <div style="font-size: 17px; opacity: 0.75">Kalendar se učitava…</div>
+                <p style="font-size: 15px; opacity: 0.6; margin: 0; max-width: 24em">Ako se ne pojavi za nekoliko sekundi, pozovite nas ili pišite na Viber — zakazaćemo termin odmah.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                  <a href="tel:0638626663" class="btn btn-primary" style="font-size: 15px; padding: 12px 22px">063 862 6663</a>
+                  <a href="viber://chat?number=%2B381638626663" class="btn btn-secondary" style="font-size: 15px; padding: 12px 20px">Viber</a>
+                </div>
+              </div>
+            </sc-if>
+            <div id="cal-embed" style="width: 100%; min-height: 560px; border-radius: 24px; overflow: hidden"></div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+          <div style="display: flex; gap: 10px">
+            <sc-for list="{{ steps }}" as="st" hint-placeholder-count="3">
+              <div style="flex: 1; display: flex; flex-direction: column; gap: 8px">
+                <span style="height: 4px; border-radius: 999px; background: {{ st.bar }}"></span>
+                <span style="font-size: 12.5px; opacity: {{ st.op }}">{{ st.label }}</span>
+              </div>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <sc-for list="{{ serviceChoices }}" as="s" hint-placeholder-count="4">
+                <button onClick="{{ s.pick }}" style="text-align: left; cursor: pointer; font: inherit; display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 999px; background: {{ s.bg }}; color: {{ s.fg }}; border: 1.5px solid {{ s.bd }}">
+                  <span style="font-family: var(--font-heading); font-size: 15px; opacity: 0.55">{{ s.num }}</span>
+                  <span style="flex: 1; font-size: 16px">{{ s.name }}</span>
+                  <span style="font-size: 13px; opacity: 0.6">{{ s.dur }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isStep2 }}">
+            <div style="display: flex; flex-direction: column; gap: 18px">
+              <div>
+                <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-bottom: 10px">Dan</div>
+                <div style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px">
+                  <sc-for list="{{ days }}" as="d" hint-placeholder-count="6">
+                    <button onClick="{{ d.pick }}" style="cursor: pointer; font: inherit; flex: none; width: 62px; padding: 10px 0; border-radius: 22px; background: {{ d.bg }}; color: {{ d.fg }}; border: 1.5px solid {{ d.bd }}; display: flex; flex-direction: column; align-items: center; gap: 2px">
+                      <span style="font-size: 11.5px; opacity: 0.65">{{ d.dow }}</span>
+                      <span style="font-family: var(--font-heading); font-size: 19px">{{ d.dnum }}</span>
+                      <span style="font-size: 10.5px; opacity: 0.55">{{ d.mon }}</span>
+                    </button>
+                  </sc-for>
+                </div>
+              </div>
+              <div>
+                <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-bottom: 10px">Slobodno {{ dayLabel }}</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                  <sc-for list="{{ slots }}" as="t" hint-placeholder-count="8">
+                    <button onClick="{{ t.pick }}" disabled="{{ t.taken }}" style="cursor: pointer; font: inherit; font-size: 15px; padding: 9px 18px; border-radius: 999px; background: {{ t.bg }}; color: {{ t.fg }}; border: 1.5px solid {{ t.bd }}; opacity: {{ t.op }}; text-decoration: {{ t.deco }}">{{ t.t }}</button>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isStep3 }}">
+            <div style="display: flex; flex-direction: column; gap: 14px">
+              <div style="font-size: 14.5px; padding: 12px 18px; border-radius: 999px; background: var(--color-accent-2-200); color: var(--color-accent-2-800)">{{ summary }}</div>
+              <div class="field"><label>Ime i prezime</label><input class="input" value="{{ fName }}" onChange="{{ setName }}" placeholder="Milica Jovanović"></div>
+              <div class="field"><label>Telefon</label><input class="input" value="{{ fPhone }}" onChange="{{ setPhone }}" placeholder="06x xxx xxxx"></div>
+              <div class="field"><label>E-mail (nije obavezno)</label><input class="input" value="{{ fEmail }}" onChange="{{ setEmail }}" placeholder="vi@primer.rs"></div>
+              <div class="field"><label>Šta vas muči? Opišite svojim rečima.</label><textarea class="input" value="{{ fMsg }}" onChange="{{ setMsg }}" style="border-radius: 22px; min-height: 96px" placeholder="Boli me gornji desni kutnjak kad pijem hladno…"></textarea></div>
+            </div>
+          </sc-if>
+
+          <div style="display: flex; gap: 10px; align-items: center; margin-top: 4px">
+            <sc-if value="{{ canBack }}">
+              <button onClick="{{ back }}" class="btn btn-secondary" style="font-size: 15px; padding: 12px 20px">Nazad</button>
+            </sc-if>
+            <button onClick="{{ next }}" disabled="{{ nextDisabled }}" class="btn btn-primary" style="flex: 1; font-size: 16px; padding: 13px 24px">{{ nextLabel }}</button>
+          </div>
+          <p style="font-size: 12.5px; opacity: 0.55; margin: 0">Termin nije naplaćen unapred. Zovemo vas samo ako nešto treba da pomerimo.</p>
+        </sc-if>
+
+        <sc-if value="{{ isDone }}">
+          <div style="display: flex; flex-direction: column; gap: 18px; align-items: flex-start; padding: 10px 0">
+            <span style="width: 58px; height: 58px; border-radius: 999px; background: var(--color-accent-2-300); color: var(--color-accent-2-800); display: grid; place-items: center; font-family: var(--font-heading); font-size: 26px">✓</span>
+            <h3 style="font-size: 26px; margin: 0">Termin je zabeležen</h3>
+            <p style="font-size: 16.5px; opacity: 0.8; margin: 0">{{ summary }}</p>
+            <p style="font-size: 15px; opacity: 0.7; margin: 0">Poslaćemo vam potvrdu na {{ fPhone }} tokom dana. Ako vam nešto nije jasno, pišite nam na Viber — odgovaramo u toku radnog vremena.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px">
+              <a href="viber://chat?number=%2B381638626663" class="btn btn-primary" style="font-size: 15px; padding: 12px 22px">Otvori Viber</a>
+              <button onClick="{{ reset }}" class="btn btn-secondary" style="font-size: 15px; padding: 12px 20px">Zakaži još jedan</button>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section id="iskustva" style="background: var(--color-surface); padding: 84px 0">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px">
+      <h2 style="font-size: clamp(30px, 3.4vw, 42px)">Iskustva pacijenata</h2>
+      <p style="font-size: 18px; opacity: 0.78; max-width: 32em; margin-bottom: 42px">Najčešće nam kažu istu stvar: nije bilo strašno.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+          <figure style="background: var(--color-bg); border-radius: 32px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+            <div style="font-size: 15px; letter-spacing: 0.12em; color: var(--color-accent)">{{ r.stars }}</div>
+            <blockquote style="margin: 0; font-size: 17px; line-height: 1.55; text-wrap: pretty">{{ r.text }}</blockquote>
+            <figcaption style="font-size: 13.5px; opacity: 0.6; margin: 0">{{ r.who }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="cenovnik" style="max-width: 1180px; margin: 0 auto; padding: 88px 24px">
+    <h2 style="font-size: clamp(30px, 3.4vw, 42px)">Cenovnik</h2>
+    <p style="font-size: 18px; opacity: 0.78; max-width: 34em; margin-bottom: 36px">Cene su orijentacione i potvrđujemo ih na prvom pregledu, pre početka rada. Bez naknadnih iznenađenja.</p>
+    <table class="table" style="font-size: 16px">
+      <thead><tr><th style="font-size: 12px">Usluga</th><th style="font-size: 12px">Trajanje</th><th style="font-size: 12px; text-align: right">Cena</th></tr></thead>
+      <tbody>
+        <sc-for list="{{ prices }}" as="p" hint-placeholder-count="7">
+          <tr>
+            <td style="padding: 14px 9px">{{ p.name }}</td>
+            <td style="padding: 14px 9px; opacity: 0.6">{{ p.dur }}</td>
+            <td style="padding: 14px 9px; text-align: right; font-family: var(--font-heading)">{{ p.price }}</td>
+          </tr>
+        </sc-for>
+      </tbody>
+    </table>
+  </section>
+
+  <footer style="background: var(--color-neutral-900); color: var(--color-neutral-200); padding: 72px 0 40px; border-radius: 60px 60px 0 0">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px">
+      <div>
+        <div style="font-family: var(--font-heading); font-size: 24px; color: var(--color-bg)">Bazzar Dental Office</div>
+        <div style="font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: var(--color-accent-300); margin-top: 8px">Dr Milan Spasić</div>
+        <p style="font-size: 15.5px; opacity: 0.7; margin-top: 12px; max-width: 22em">Stomatološka ordinacija u Dušanovom bazaru, Niš.</p>
+        <a href="#termin" class="btn btn-primary" style="margin-top: 14px; font-size: 15px; padding: 12px 22px">Zakaži termin</a>
+      </div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.55; margin-bottom: 12px">Adresa</div>
+        <p style="font-size: 15.5px; line-height: 1.6; opacity: 0.85; margin: 0">Cara Dušana 54<br>Poslovni centar Dušanov bazar<br>Drugi sprat, lok. P 219<br>18000 Niš</p>
+      </div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.55; margin-bottom: 12px">Kontakt</div>
+        <p style="font-size: 15.5px; line-height: 1.8; margin: 0">
+          <a href="tel:018522566" style="color: var(--color-accent-300); text-decoration: none">018 522 566</a><br>
+          <a href="tel:0638626663" style="color: var(--color-accent-300); text-decoration: none">063 862 6663</a><br>
+          <a href="mailto:bazardentaloffice@gmail.com" style="color: var(--color-accent-300); text-decoration: none">bazardentaloffice@gmail.com</a>
+        </p>
+      </div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.55; margin-bottom: 12px">Radno vreme</div>
+        <p style="font-size: 15.5px; line-height: 1.7; opacity: 0.85; margin: 0">Ponedeljak – petak<br>09:00 – 19:00<br><br>Subota<br>09:00 – 14:00</p>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 40px auto 0; padding: 20px 24px 0; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px; opacity: 0.5">© 2026 Bazzar Dental Office</div>
+  </footer>
+
+  <sc-if value="{{ viberFallback }}">
+    <div onClick="{{ closeViber }}" style="position: fixed; inset: 0; z-index: 100; background: rgba(32,30,29,.5); display: grid; place-items: center; padding: 24px">
+      <div class="card elev-lg" style="max-width: 400px; padding: 30px; gap: 14px; align-items: flex-start; background: var(--color-bg)">
+        <h3 style="font-size: 24px; margin: 0">Pišite nam na Viber</h3>
+        <p style="font-size: 16px; opacity: 0.8; margin: 0">Izgleda da Viber nije instaliran na ovom uređaju. Broj je:</p>
+        <div style="font-family: var(--font-heading); font-size: 26px; color: var(--color-accent-700)">063 862 6663</div>
+        <p style="font-size: 14.5px; opacity: 0.65; margin: 0">Sačuvajte broj i pišite nam iz Vibera na telefonu, ili nas pozovite direktno.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px">
+          <a href="tel:0638626663" class="btn btn-primary" style="font-size: 15px; padding: 12px 22px">Pozovi</a>
+          <button onClick="{{ copyViber }}" class="btn btn-secondary" style="font-size: 15px; padding: 12px 20px">{{ copyLabel }}</button>
+          <button onClick="{{ closeViber }}" class="btn btn-ghost" style="font-size: 15px; padding: 12px 18px">Zatvori</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <a href="viber://chat?number=%2B381638626663" onClick="{{ tryViber }}" aria-label="Piši nam na Viber" style="position: fixed; right: 22px; bottom: 22px; z-index: 90; display: flex; align-items: center; gap: 12px; padding: 14px 22px 14px 16px; border-radius: 999px; background: #7360f2; color: #fff; text-decoration: none; font-size: 15.5px; box-shadow: var(--shadow-lg); animation: pulseRing 2.6s ease-out infinite" style-hover="background: #5f4de0">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.4 1.5c-2.3 0-5.6.3-7.3 1.9C3.8 4.6 3.4 6.5 3.3 8.9c0 2.3-.1 5.4 1.4 7.5.9 1.3 2.3 2 3.6 2.3v4c0 .5.6.7.9.4l3-3.5c3.4 0 6.1-.6 7.4-2.4 1.1-1.5 1.4-4.2 1.4-7 0-2.5-.4-4.7-1.9-6.2-1.7-1.7-4.5-2.5-6.7-2.5Zm.3 3.1c1.9 0 4 1 4.4 4.2.1.4-.5.5-.6.1-.4-2.7-2-3.6-3.8-3.7-.4 0-.4-.6 0-.6Zm-3.2 1.1c.4-.1.8.4 1 .6l.8 1.2c.2.3.1.7-.2.9l-.5.4c-.2.2-.2.5-.1.6.5 1.2 1.6 2.2 2.8 2.7.2.1.4 0 .6-.2l.4-.5c.2-.3.6-.3.9-.2l1.3.8c.3.2.7.5.6 1-.2.8-1 1.6-1.9 1.6-2.7-.2-6.4-4-6.6-6.7 0-.9.8-1.9 1.6-2.1Zm3.3.7c1.5.1 2.5.9 2.7 2.6 0 .4-.6.5-.6.1-.2-1.3-.9-1.9-2.1-2.1-.4 0-.4-.6 0-.6Zm.1 1.5c.7.1 1.2.5 1.3 1.4 0 .4-.6.4-.6 0-.1-.6-.4-.8-.9-.9-.4 0-.3-.5.2-.5Z"></path></svg>
+    Viber
+  </a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+const DOW = ['Ned','Pon','Uto','Sre','Čet','Pet','Sub'];
+const MON = ['jan','feb','mar','apr','maj','jun','jul','avg','sep','okt','nov','dec'];
+const TIMES = ['08:00','09:00','10:00','11:00','12:00','13:00','16:00','17:00','18:00'];
+const SERVICES = [
+  { id: 'implant', num: '01', name: 'Implantologija', dur: '60 min', desc: 'Nadoknada zuba koji više nema — od jednog do celog niza. Planiramo digitalno, radimo u fazama i objasnimo šta se dešava u svakoj.' },
+  { id: 'orto', num: '02', name: 'Ortodoncija', dur: '45 min', desc: 'Fiksne i providne folije, za decu i odrasle. Nikad nije prepozno da se zubi pomere na svoje mesto.' },
+  { id: 'estetika', num: '03', name: 'Estetska stomatologija', dur: '45 min', desc: 'Beljenje, kompozitne nadogradnje i keramičke ljuspice. Cilj je osmeh koji izgleda kao vaš, samo mirniji.' },
+  { id: 'hirurgija', num: '04', name: 'Oralna hirurgija', dur: '60 min', desc: 'Vađenje umnjaka, apikotomije i manje intervencije, u lokalnoj anesteziji i bez čekanja na bolnicu.' }
+];
+
+class Component extends DCLogic {
+  state = { step: 1, service: null, dayKey: null, time: null, name: '', phone: '', email: '', msg: '', done: false };
+
+  days() {
+    const out = [];
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    d.setDate(d.getDate() + 1);
+    while (out.length < 12) {
+      if (d.getDay() !== 0) {
+        const key = d.toISOString().slice(0, 10);
+        const seed = d.getDate() * 7 + d.getMonth();
+        out.push({
+          key, dow: DOW[d.getDay()], dnum: String(d.getDate()), mon: MON[d.getMonth()],
+          label: DOW[d.getDay()] + ' ' + d.getDate() + '. ' + MON[d.getMonth()],
+          taken: TIMES.filter((_, i) => (seed + i * 5) % 4 === 0)
+        });
+      }
+      d.setDate(d.getDate() + 1);
+    }
+    return out;
+  }
+
+  pill(sel, disabled) {
+    if (disabled) return { bg: 'transparent', fg: 'var(--color-text)', bd: 'var(--color-divider)', op: '0.35', deco: 'line-through' };
+    if (sel) return { bg: 'var(--color-accent)', fg: 'var(--color-bg)', bd: 'var(--color-accent)', op: '1', deco: 'none' };
+    return { bg: 'var(--color-bg)', fg: 'var(--color-text)', bd: 'var(--color-divider)', op: '1', deco: 'none' };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const days = this.days();
+    const day = days.find(d => d.key === s.dayKey) || null;
+    const svc = SERVICES.find(x => x.id === s.service) || null;
+    const set = k => e => this.setState({ [k]: e.target.value });
+
+    const stepLabels = ['Usluga', 'Termin', 'Podaci'];
+    const canNext = s.step === 1 ? !!s.service : s.step === 2 ? !!(day && s.time) : s.name.trim().length > 1 && s.phone.trim().length > 5;
+
+    return {
+      team: [
+        { slot: 'dr1', role: 'Osnivač ordinacije', name: 'Dr Ime Prezime', note: 'Implantologija i oralna hirurgija. Radi sporo i objašnjava sve unapred, i pacijentima koji su godinama izbegavali stolicu.' },
+        { slot: 'dr2', role: 'Ortodont', name: 'Dr Ime Prezime', note: 'Fiksne aparate i folije vodi od prvog snimka do zadnje kontrole. Sa decom ima beskrajno strpljenja.' },
+        { slot: 'dr3', role: 'Stomatološka sestra', name: 'Ime Prezime', note: 'Prva osoba koju vidite i ona koja vas zove pre svakog termina. Ako nešto ne razumete, njoj se najlakše obratiti.' }
+      ],
+      services: SERVICES,
+      reviews: [
+        { stars: '★★★★★', text: 'Došla sam posle deset godina izbegavanja zubara. Niko me nije prekoreo, samo su napravili plan i išli korak po korak.', who: 'Milica J., Niš' },
+        { stars: '★★★★★', text: 'Umnjak izvađen za dvadeset minuta, bez ikakvog bola. Zvali su me sutradan da provere kako sam.', who: 'Nemanja S., Niš' },
+        { stars: '★★★★★', text: 'Sina vodim od šeste godine i nikad nije napravio scenu. To govori dovoljno.', who: 'Jelena P., Niška Banja' }
+      ],
+      prices: [
+        { name: 'Prvi pregled i plan terapije', dur: '20 min', price: 'bez naplate' },
+        { name: 'Uklanjanje kamenca i poliranje', dur: '40 min', price: '4.000 RSD' },
+        { name: 'Beli kompozitni ispun', dur: '45 min', price: 'od 4.500 RSD' },
+        { name: 'Zubni implant sa krunicom', dur: '2 termina', price: 'od 55.000 RSD' },
+        { name: 'Fiksni ortodontski aparat', dur: 'po planu', price: 'od 65.000 RSD' },
+        { name: 'Providne folije', dur: 'po planu', price: 'na osnovu snimka' },
+        { name: 'Vađenje umnjaka', dur: '45 min', price: 'od 6.000 RSD' },
+        { name: 'Beljenje zuba', dur: '60 min', price: '18.000 RSD' }
+      ],
+      steps: stepLabels.map((label, i) => ({
+        label, bar: s.step >= i + 1 ? 'var(--color-accent)' : 'var(--color-divider)', op: s.step >= i + 1 ? '0.9' : '0.45'
+      })),
+      isStep1: s.step === 1 && !s.done,
+      isStep2: s.step === 2 && !s.done,
+      isStep3: s.step === 3 && !s.done,
+      isDone: s.done && !this.calLink(),
+      viberFallback: !!s.viberFallback,
+      copyLabel: s.copied ? 'Kopirano' : 'Kopiraj broj',
+      closeViber: () => this.setState({ viberFallback: false, copied: false }),
+      copyViber: () => {
+        if (navigator.clipboard) navigator.clipboard.writeText('0638626663');
+        this.setState({ copied: true });
+      },
+      tryViber: e => {
+        const mobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);
+        if (!mobile) {
+          e.preventDefault();
+          this.setState({ viberFallback: true, copied: false });
+          return;
+        }
+        const t = setTimeout(() => this.setState({ viberFallback: true, copied: false }), 1400);
+        const cancel = () => { if (document.hidden) clearTimeout(t); };
+        document.addEventListener('visibilitychange', cancel, { once: true });
+      },
+      useCal: !!this.calLink(),
+      calLoading: !!this.calLink() && !s.calReady,
+      notDone: !s.done && !this.calLink(),
+      canBack: s.step > 1 && !s.done,
+      nextDisabled: !canNext,
+      nextLabel: s.step === 3 ? 'Pošalji zahtev' : 'Nastavi',
+      serviceChoices: SERVICES.map(x => Object.assign({}, x, this.pill(s.service === x.id, false), {
+        pick: () => this.setState({ service: x.id })
+      })),
+      days: days.map(d => Object.assign({}, d, this.pill(s.dayKey === d.key, false), {
+        pick: () => this.setState({ dayKey: d.key, time: null })
+      })),
+      slots: (day ? day.taken : []) && TIMES.map(t => {
+        const taken = day ? day.taken.indexOf(t) !== -1 : false;
+        return Object.assign({ t, taken }, this.pill(s.time === t, taken), {
+          pick: () => { if (!taken) this.setState({ time: t }); }
+        });
+      }),
+      dayLabel: day ? day.label : '',
+      summary: [svc ? svc.name : '', day ? day.label : '', s.time].filter(Boolean).join(' · '),
+      fName: s.name, fPhone: s.phone, fEmail: s.email, fMsg: s.msg,
+      setName: set('name'), setPhone: set('phone'), setEmail: set('email'), setMsg: set('msg'),
+      next: () => {
+        if (!canNext) return;
+        if (s.step === 3) this.setState({ done: true });
+        else this.setState({ step: s.step + 1, dayKey: s.step === 1 && !s.dayKey ? days[0].key : s.dayKey });
+      },
+      back: () => this.setState({ step: Math.max(1, s.step - 1) }),
+      reset: () => this.setState({ step: 1, service: null, dayKey: null, time: null, name: '', phone: '', email: '', msg: '', done: false })
+    };
+  }
+
+  calLink() {
+    return (this.props.calLink || '').trim();
+  }
+
+  mountCal() {
+    const link = this.calLink();
+    if (!link || this._calLink === link) return;
+    const host = document.getElementById('cal-embed');
+    if (!host) return;
+    this._calLink = link;
+    host.innerHTML = '';
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement('script')).src = A; cal.loaded = true; }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const ns = ar[1]; api.q = api.q || [];
+          if (typeof ns === 'string') { cal.ns[ns] = cal.ns[ns] || api; p(cal.ns[ns], ar); p(cal, ['initNamespace', ns]); }
+          else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, 'https://app.cal.com/embed/embed.js', 'init');
+    window.Cal('init', { origin: 'https://cal.com' });
+    window.Cal('inline', { elementOrSelector: '#cal-embed', calLink: link, layout: 'month_view' });
+    window.Cal('ui', { hideEventTypeDetails: false, layout: 'month_view', styles: { branding: { brandColor: '#c67139' } } });
+    const card = document.querySelector('[data-termin-card]');
+    if (card) { card.style.padding = '14px'; card.style.maxWidth = '760px'; }
+    const check = setInterval(() => {
+      if (host.querySelector('iframe')) { clearInterval(check); this.setState({ calReady: true }); }
+    }, 300);
+    setTimeout(() => clearInterval(check), 12000);
+  }
+
+  componentDidUpdate() { this.mountCal(); }
+
+  componentDidMount() {
+    this.mountCal();
+    const apply = () => {
+      const n = document.querySelector('[data-navlinks]');
+      if (n) n.style.display = window.innerWidth > 1120 ? 'flex' : 'none';
+      const grid = document.querySelector('[data-termin-grid]');
+      if (grid && this.calLink()) {
+        const wide = window.innerWidth > 1120;
+        grid.style.gridTemplateColumns = wide ? 'minmax(240px, 300px) minmax(0, 1fr)' : '1fr';
+        grid.style.gap = wide ? '32px' : '28px';
+      }
+      const narrow = window.innerWidth <= 620;
+
+      const cta = document.querySelector('[data-hdrcta]');
+      const bar = cta && cta.parentElement;
+      if (bar) { bar.style.flexWrap = narrow ? 'wrap' : 'nowrap'; bar.style.rowGap = narrow ? '10px' : ''; }
+      if (cta) { cta.style.flexBasis = narrow ? '100%' : ''; cta.style.justifyContent = 'center'; }
+      const tel = document.querySelector('[data-hdrtel]');
+      if (tel) tel.style.display = window.innerWidth > 760 ? 'inline-flex' : 'none';
+      const tel2 = document.querySelector('[data-hdrtel2]');
+      if (tel2) tel2.style.display = window.innerWidth > 620 ? 'inline-flex' : 'none';
+    };
+    apply();
+    window.addEventListener('resize', apply);
+  }
+}
+</script>
+</body>
+</html>
