@@ -8,14 +8,14 @@ Statični sajt ordinacije. Nema build koraka — svi fajlovi se serviraju kako j
 2. Settings → Pages → Source: `Deploy from a branch`, branch `main`, folder `/ (root)`.
 3. Sačekajte minut; sajt je na `https://korisnik.github.io/ime-repozitorijuma/`.
 
-Fajl `.nojekyll` mora ostati — bez njega GitHub ignoriše fasciklu `_ds/` i sajt ostaje bez stilova.
+Fajl `.nojekyll` je dodatna sigurnost, ali nije neophodan — nijedna fascikla ne počinje podvlakom.
 
 ## Struktura
 
 - `index.html` — cela stranica
 - `support.js` — runtime
 - `image-slot.js` — polja za slike
-- `_ds/` — stilovi dizajn sistema
+- `ds/` — stilovi dizajn sistema
 
 ## Slike
 
